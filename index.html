@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#123d2b">
+  <title>KasetPlus+ | ดาวน์โหลดแอป</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/"><span class="brand-mark">K+</span><span><b>KasetPlus+</b><small>SMART AGRICULTURE</small></span></a>
+    <button class="btn btn-outline" id="adminOpen">ผู้ดูแลระบบ</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">SMART FARMING • ANDROID APP</span>
+        <h1>เทคโนโลยีเพื่อ<br><em>การเกษตรอัจฉริยะ</em></h1>
+        <p>จัดการฟาร์มของคุณได้สะดวกยิ่งขึ้น ด้วย KasetPlus+ แอปพลิเคชันเพื่อการเกษตร</p>
+        <a class="btn btn-light" href="#download">ดูรายละเอียดและดาวน์โหลด <span>↓</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="sun"></div><div class="leaf leaf-one"></div><div class="leaf leaf-two"></div>
+        <div class="phone"><div class="phone-notch"></div><div class="phone-screen">
+          <div class="screen-logo">K+</div><b>KasetPlus+</b><small>ฟาร์มของฉัน</small>
+          <div class="screen-card">🌱 <span>สถานะพืชผล</span><strong>ปกติ</strong></div>
+          <div class="screen-card">🌤️ <span>สภาพอากาศ</span><strong>32°C</strong></div>
+          <div class="screen-nav">⌂　▦　◉　⚙</div>
+        </div></div>
+      </div>
+    </section>
+
+    <section class="content" id="download">
+      <div class="section-heading"><div><span class="eyebrow green">GET THE APP</span><h2>ดาวน์โหลดแอปพลิเคชัน</h2></div><span class="safe-note">ไฟล์จากผู้พัฒนา KasetPlus+</span><button class="btn btn-outline" id="refreshButton" type="button">รีเฟรชข้อมูล</button></div>
+      <article class="download-card">
+        <div class="app-icon">K<span>+</span></div>
+        <div class="app-info"><h3>KasetPlus+ สำหรับ Android</h3><p id="versionLine">กำลังโหลดข้อมูลเวอร์ชัน…</p><div class="meta"><span id="sizeLine">—</span><span id="dateLine">—</span></div></div>
+        <a class="btn btn-primary" id="downloadButton" href="#" hidden><span>↓</span> ดาวน์โหลด APK</a>
+        <span id="emptyState" class="empty-state">ยังไม่มีไฟล์ APK ให้ดาวน์โหลด</span>
+      </article>
+      <div class="notice" id="releaseNotesWrap" hidden><span>✦</span><p id="releaseNotes"></p></div>
+      <div class="notice"><span>ⓘ</span><p>Android อาจแสดงคำเตือนเมื่อเริ่มติดตั้งไฟล์ APK จากภายนอก Play Store โปรดติดตั้งเฉพาะไฟล์ที่คุณเชื่อถือ และตรวจสอบแหล่งที่มาก่อนติดตั้ง</p></div>
+      <section class="features">
+        <div><span>🌿</span><h3>จัดการฟาร์ม</h3><p>รวมเครื่องมือช่วยดูแลข้อมูลการเกษตร</p></div>
+        <div><span>📊</span><h3>ติดตามข้อมูล</h3><p>ดูข้อมูลและสถานะจากแอปได้สะดวก</p></div>
+        <div><span>🔄</span><h3>อัปเดตเวอร์ชัน</h3><p>ดาวน์โหลดไฟล์เวอร์ชันล่าสุดจากหน้านี้</p></div>
+      </section>
+    </section>
+  </main>
+
+  <footer><b>KasetPlus+</b><span>© <span id="year"></span> KasetPlus+. All rights reserved.</span></footer>
+
+  <div class="modal-backdrop" id="adminModal" hidden>
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="adminTitle">
+      <button class="close" id="adminClose" aria-label="ปิด">×</button>
+      <span class="eyebrow green">ADMIN CONSOLE</span><h2 id="adminTitle">จัดการไฟล์ APK</h2>
+      <p class="muted">ระบบนี้ใช้ GitHub Releases แทน Firebase Storage ผู้ดูแลจะอัปโหลดไฟล์ผ่าน GitHub โดยตรง เพื่อไม่เปิดเผยรหัสลับในเว็บไซต์</p>
+      <a class="btn btn-primary full" id="adminReleaseLink" href="#" target="_blank" rel="noopener">เปิดหน้า Releases เพื่ออัปโหลด APK</a>
+      <a class="btn btn-outline full logout" id="adminRepoLink" href="#" target="_blank" rel="noopener">เปิด Repository</a>
+      <p class="muted tiny">วิธีอัปโหลด: กด Draft a new release → สร้าง Tag เช่น v1.0.0 → ใส่ชื่อและรายละเอียด → แนบไฟล์ .apk → กด Publish release</p>
+    </section>
+  </div>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
